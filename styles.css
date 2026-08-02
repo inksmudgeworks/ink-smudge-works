@@ -70,6 +70,17 @@ nav a {
   text-decoration: none;
 }
 
+.language-switch {
+  display: flex;
+  gap: 6px;
+  color: #8a95a8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+.language-switch a { color: var(--navy); font-size: inherit; }
+.language-switch [aria-current="page"] { color: var(--navy); }
+
 .hero {
   display: grid;
   grid-template-columns: 1fr minmax(360px, 520px);
@@ -115,16 +126,19 @@ h1 {
   text-decoration: none;
 }
 
-.brand-art { margin: 0; }
+.brand-art {
+  overflow: hidden;
+  margin: 0;
+  background: #fff;
+}
 .brand-art img {
   display: block;
   width: 100%;
   height: auto;
-  padding: 2px;
   background: #fff;
-  clip-path: inset(2px);
   filter: contrast(1.01);
   mix-blend-mode: multiply;
+  transform: scale(1.012);
 }
 
 .products {
