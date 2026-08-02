@@ -232,11 +232,16 @@ h1 {
 .product-icon, .placeholder-icon {
   align-self: center;
   width: 100%;
-  aspect-ratio: 1;
+  height: auto;
+  aspect-ratio: 1 / 1;
   border-radius: 27%;
 }
 
-.product-icon { box-shadow: 0 16px 38px rgba(7, 28, 69, .16); }
+.product-icon {
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 16px 38px rgba(7, 28, 69, .16);
+}
 
 .placeholder-icon {
   display: grid;
@@ -350,6 +355,12 @@ footer a { text-decoration: none; }
     gap: 20px;
     min-height: 230px;
     padding: 32px 24px;
+  }
+  .product-icon,
+  .placeholder-icon {
+    width: 88px;
+    height: 88px;
+    align-self: start;
   }
   .product-body h3, .product-card--featured h3 { font-size: 25px; }
   .description { font-size: 12px; }
