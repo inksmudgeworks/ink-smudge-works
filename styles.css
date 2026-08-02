@@ -71,15 +71,43 @@ nav a {
 }
 
 .language-switch {
-  display: flex;
-  gap: 6px;
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
   color: #8a95a8;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .1em;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .06em;
 }
-.language-switch a { color: var(--navy); font-size: inherit; }
-.language-switch [aria-current="page"] { color: var(--navy); }
+.language-switch a,
+.language-switch [aria-current="page"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  min-height: 30px;
+  padding: 4px 7px;
+  border: 1px solid var(--navy);
+  border-radius: 5px;
+  font-size: inherit;
+  line-height: 1;
+  text-decoration: none;
+}
+.language-switch a {
+  background: #fff;
+  color: var(--navy);
+}
+.language-switch a:hover {
+  background: var(--blue-wash);
+}
+.language-switch [aria-current="page"] {
+  background: var(--navy);
+  color: #fff;
+}
+.language-switch > [aria-hidden="true"] {
+  min-width: auto;
+  color: #8a95a8;
+}
 
 .hero {
   display: grid;
@@ -138,7 +166,7 @@ h1 {
   background: #fff;
   filter: contrast(1.01);
   mix-blend-mode: multiply;
-  transform: scale(1.012);
+  transform: none;
 }
 
 .products {
@@ -311,6 +339,9 @@ footer a { text-decoration: none; }
   .brand-wordmark-image { width: 116px; height: 26px; }
   nav { gap: 16px; }
   nav a { font-size: 9px; }
+  nav > a[href^="#"] { display: none; }
+  .language-switch { font-size: 12px; }
+  .language-switch a { font-size: inherit; }
   .hero { min-height: auto; padding-top: 46px; }
   .brand-art { width: min(88vw, 390px); }
   .products { padding-top: 76px; padding-bottom: 80px; }
