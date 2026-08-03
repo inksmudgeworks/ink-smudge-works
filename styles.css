@@ -276,25 +276,13 @@ h1 {
 
 .store-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .store-links a {
-  display: flex;
-  gap: 9px;
-  align-items: center;
-  min-width: 170px;
-  padding: 8px 15px;
-  border-radius: 8px;
-  background: var(--navy);
-  color: var(--white);
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.1;
+  display: inline-block;
+  line-height: 0;
   text-decoration: none;
-  transition: transform .2s ease, background .2s ease;
+  transition: transform .2s ease;
 }
-.store-links a:hover { transform: translateY(-2px); background: #17386f; }
-.store-links small { display: block; margin-bottom: 2px; font-size: 8px; font-weight: 500; }
-.store-symbol { font-size: 20px; }
-.play-symbol { font-size: 18px; }
-.provisional-note { margin: 8px 0 0; color: #7b879b; font-size: 9px; }
+.store-links a:hover { transform: translateY(-2px); }
+.store-links img { display: block; width: 150px; height: auto; }
 
 .contact {
   max-width: var(--max-width);
@@ -365,7 +353,6 @@ footer a { text-decoration: none; }
   .product-body h3, .product-card--featured h3 { font-size: 25px; }
   .description { font-size: 12px; }
   .store-links { display: grid; }
-  .store-links a { min-width: 0; }
   .contact { padding-block: 90px; }
   footer { display: block; text-align: center; }
   footer a { display: inline-block; margin-top: 12px; }
