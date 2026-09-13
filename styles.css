@@ -114,10 +114,10 @@ nav a {
   grid-template-columns: 1fr minmax(360px, 520px);
   gap: clamp(30px, 6vw, 90px);
   align-items: center;
-  min-height: calc(100svh - 78px);
+  min-height: auto;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 56px 24px 72px;
+  padding: 56px 24px 32px;
 }
 
 .eyebrow {
@@ -170,7 +170,7 @@ h1 {
 }
 
 .products {
-  padding: 104px max(24px, calc((100vw - var(--max-width)) / 2)) 120px;
+  padding: 40px max(24px, calc((100vw - var(--max-width)) / 2)) 120px;
   background: var(--blue-wash);
 }
 
@@ -359,7 +359,7 @@ footer a { text-decoration: none; }
   .language-switch a { font-size: inherit; }
   .hero { min-height: auto; padding-top: 46px; }
   .brand-art { width: min(88vw, 390px); }
-  .products { padding-top: 76px; padding-bottom: 80px; }
+  .products { padding-top: 32px; padding-bottom: 80px; }
   .product-card, .product-card--featured {
     grid-template-columns: 88px 1fr;
     gap: 20px;
