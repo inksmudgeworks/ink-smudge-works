@@ -372,6 +372,19 @@ footer a { text-decoration: none; }
   footer a { display: inline-block; margin-top: 12px; }
 }
 
+@media (max-width: 380px) {
+  .product-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+    padding-inline: 16px;
+  }
+  .product-icon,
+  .placeholder-icon {
+    width: 76px;
+    height: 76px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
